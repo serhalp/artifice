@@ -1,4 +1,4 @@
-import { RouteDefinition } from "@solidjs/router";
+import { type RouteDefinition } from "@solidjs/router";
 import { For, Match, Switch, createResource } from "solid-js";
 import { getRandomGame } from "~/lib/api";
 
@@ -30,7 +30,7 @@ export default function Play() {
       <Switch>
         <Match when={game.loading}>Loading game...</Match>
         <Match when={game.error}>
-          <span>Error: {game.error()}</span>
+          <span>Error: {game.error}</span>
         </Match>
         <Match when={game()}>
           {(() => {

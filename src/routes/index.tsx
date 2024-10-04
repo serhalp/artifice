@@ -1,16 +1,6 @@
-import {
-  RouteDefinition,
-  useSubmission,
-  type RouteSectionProps,
-} from "@solidjs/router";
+import { useSubmission, type RouteSectionProps } from "@solidjs/router";
 import { Match, Switch } from "solid-js";
-import { submitUserPrompt, getUserPrompts } from "~/lib/api";
-
-export const route = {
-  preload() {
-    getUserPrompts();
-  },
-} satisfies RouteDefinition;
+import { submitUserPrompt } from "~/lib/api";
 
 export default function Home(_props: RouteSectionProps) {
   const submittingUserPrompt = useSubmission(submitUserPrompt);
