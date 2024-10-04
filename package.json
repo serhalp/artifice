@@ -1,0 +1,22 @@
+{
+  "name": "artifice",
+  "description": "Artifice: guess the real source prompt for the gen AI image",
+  "type": "module",
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.0.1",
+    "@solidjs/router": "^0.14.1",
+    "@solidjs/start": "^1.0.6",
+    "openai": "^4.61.0",
+    "solid-js": "^1.8.18",
+    "unstorage": "1.10.2",
+    "vinxi": "^0.4.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
