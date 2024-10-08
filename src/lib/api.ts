@@ -77,7 +77,11 @@ const shuffleInto = <T>(val: T, arr: T[]) => {
 // TODO(serhalp) Error handling
 export const getRandomGame = async (): Promise<Game> => {
   "use server";
-  const prompt = getRandomElement(await getUserPrompts());
+  const userPrompts = await getUserPrompts();
+  if (userPrompts.length === 0) {
+    throw new Error("No user prompts found. Please submit a prompt first.");
+  }
+  const prompt = getRandomElement(userPrompts);
   const { id: promptId } = prompt;
   const [generatedImage, decoyPrompts] = await Promise.all([
     getGeneratedImage({ promptId }),
