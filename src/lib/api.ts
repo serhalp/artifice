@@ -41,14 +41,6 @@ export const submitUserPrompt = action(async (formData: FormData) => {
     (await storage.getItem<UserPrompt[]>(StorageKey.UserPrompts)) ?? [];
 
   const promptId = generateUuid();
-  await storage.setItem<UserPrompt[]>(StorageKey.UserPrompts, [
-    ...userPrompts,
-    {
-      id: promptId,
-      userInputPrompt,
-    },
-  ]);
-
   const generatedImage = await generateImage(userInputPrompt);
   await storage.setItem<GeneratedImage>(
     getGeneratedImageStorageKey({ promptId }),
@@ -61,6 +53,15 @@ export const submitUserPrompt = action(async (formData: FormData) => {
     getDecoyPromptsStorageKey({ promptId }),
     decoyPrompts.map((prompt) => ({ prompt })),
   );
+
+  // Save the actual user prompt last to ensure we never try to play an invalid game.
+  await storage.setItem<UserPrompt[]>(StorageKey.UserPrompts, [
+    ...userPrompts,
+    {
+      id: promptId,
+      userInputPrompt,
+    },
+  ]);
 });
 
 const getRandomIndex = <T>(arr: T[]): number =>
