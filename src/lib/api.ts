@@ -128,3 +128,35 @@ export const getDecoyPrompts = cache(
   },
   "getDecoyPrompts",
 );
+
+/**
+ * Resolves to a boolean indicating whether the answer is correct.
+ */
+export const submitAnswer = action(
+  async (
+    /**
+     * The user prompt ID for which the answer is being submitted.
+     * This serves as a unique identifier for the game.
+     */
+    userPromptId: string,
+    /**
+     * The prompt being submitted as an answer, as is.
+     */
+    prompt: string,
+  ): Promise<boolean> => {
+    "use server";
+    if (typeof prompt !== "string") {
+      throw new Error("Missing or invalid prompt answer provided");
+    }
+
+    const userPrompts =
+      (await storage.getItem<UserPrompt[]>(StorageKey.UserPrompts)) ?? [];
+    const userPrompt = userPrompts.find(({ id }) => id === userPromptId);
+
+    if (userPrompt == null) {
+      throw new Error("User prompt not found. Something went wrong.");
+    }
+
+    return userPrompt.userInputPrompt === prompt;
+  },
+);
