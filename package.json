@@ -16,6 +16,11 @@
     "unstorage": "1.10.2",
     "vinxi": "^0.4.1"
   },
+  "pnpm": {
+    "overrides": {
+      "nitropack": "npm:nitropack-nightly@latest"
+    }
+  },
   "engines": {
     "node": ">=18"
   }
