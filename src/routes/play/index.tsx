@@ -68,9 +68,11 @@ export default function Play() {
 
                 <div>
                   {submittingAnswer.pending === false
-                    ? submittingAnswer.result
-                      ? "✅ Correct!"
-                      : "❌ Incorrect!"
+                    ? typeof submittingAnswer.result === "boolean"
+                      ? submittingAnswer.result === true
+                        ? "✅ Correct!"
+                        : "❌ Incorrect!"
+                      : "Oops, something went wrong"
                     : null}
                 </div>
 
