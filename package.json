@@ -8,13 +8,14 @@
     "start": "vinxi start"
   },
   "dependencies": {
-    "@netlify/blobs": "^8.0.1",
-    "@solidjs/router": "^0.14.1",
-    "@solidjs/start": "^1.0.6",
-    "openai": "^4.61.0",
-    "solid-js": "^1.8.18",
-    "unstorage": "1.10.2",
-    "vinxi": "^0.4.1"
+    "@netlify/blobs": "^8.1.0",
+    "@solidjs/router": "^0.14.10",
+    "@solidjs/start": "^1.0.9",
+    "openai": "^4.68.1",
+    "pino": "^9.5.0",
+    "solid-js": "^1.9.2",
+    "unstorage": "1.12.0",
+    "vinxi": "^0.4.3"
   },
   "pnpm": {
     "overrides": {
@@ -24,5 +25,8 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "pnpm@9.6.0+sha1.65cd48c20dd329b7f455088b6dd17d4d5b6d02e3"
+  "packageManager": "pnpm@9.6.0+sha1.65cd48c20dd329b7f455088b6dd17d4d5b6d02e3",
+  "devDependencies": {
+    "pino-pretty": "^11.3.0"
+  }
 }

@@ -3,6 +3,7 @@ import { action, cache } from "@solidjs/router";
 import type { DecoyPrompt, Game, GeneratedImage, UserPrompt } from "~/types";
 import { storage } from "./db";
 import { generateDecoyPrompts, generateImage } from "./openai";
+import rootLogger from "./logger";
 
 enum StorageKey {
   UserPrompts = "user-prompts",
@@ -41,20 +42,30 @@ export const submitUserPrompt = action(async (formData: FormData) => {
     (await storage.getItem<UserPrompt[]>(StorageKey.UserPrompts)) ?? [];
 
   const promptId = generateUuid();
+  const logger = rootLogger.child({ promptId });
+  logger.info("Generating image for prompt");
   const generatedImage = await generateImage(userInputPrompt);
+  logger.info("Generated image for prompt");
+  logger.info("Saving generated image");
   await storage.setItem<GeneratedImage>(
     getGeneratedImageStorageKey({ promptId }),
     { blob: generatedImage },
   );
+  logger.info("Saved generated image");
 
+  logger.info("Generating decoy prompts");
   const generatedImageUrl = `data:image/png;base64,${generatedImage}`;
   const decoyPrompts = await generateDecoyPrompts(generatedImageUrl);
+  logger.info("Generated decoy prompts");
+  logger.info("Saving decoy prompts");
   await storage.setItem<DecoyPrompt[]>(
     getDecoyPromptsStorageKey({ promptId }),
     decoyPrompts.map((prompt) => ({ prompt })),
   );
+  logger.info("Saved decoy prompts");
 
   // Save the actual user prompt last to ensure we never try to play an invalid game.
+  logger.info("Saving user prompt");
   await storage.setItem<UserPrompt[]>(StorageKey.UserPrompts, [
     ...userPrompts,
     {
@@ -62,6 +73,7 @@ export const submitUserPrompt = action(async (formData: FormData) => {
       userInputPrompt,
     },
   ]);
+  logger.info("Saved user prompt");
 });
 
 const getRandomIndex = <T>(arr: T[]): number =>
