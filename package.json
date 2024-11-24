@@ -9,18 +9,13 @@
   },
   "dependencies": {
     "@netlify/blobs": "^8.1.0",
-    "@solidjs/router": "^0.14.10",
-    "@solidjs/start": "^1.0.9",
-    "openai": "^4.68.1",
+    "@solidjs/router": "^0.15.1",
+    "@solidjs/start": "^1.0.10",
+    "openai": "^4.71.1",
     "pino": "^9.5.0",
-    "solid-js": "^1.9.2",
-    "unstorage": "1.12.0",
+    "solid-js": "^1.9.3",
+    "unstorage": "1.13.1",
     "vinxi": "^0.4.3"
-  },
-  "pnpm": {
-    "overrides": {
-      "nitropack": "npm:nitropack-nightly@latest"
-    }
   },
   "engines": {
     "node": ">=18"
