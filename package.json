@@ -22,6 +22,6 @@
   },
   "packageManager": "pnpm@9.6.0+sha1.65cd48c20dd329b7f455088b6dd17d4d5b6d02e3",
   "devDependencies": {
-    "pino-pretty": "^11.3.0"
+    "pino-pretty": "^13.0.0"
   }
 }
