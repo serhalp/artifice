@@ -16,10 +16,10 @@ importers:
         version: 0.15.2(solid-js@1.9.3)
       '@solidjs/start':
         specifier: ^1.0.10
-        version: 1.0.10(solid-js@1.9.3)(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))(vite@6.0.2(@types/node@22.10.1)(jiti@2.4.1)(terser@5.36.0))
+        version: 1.0.10(solid-js@1.9.3)(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))(vite@6.0.2(@types/node@22.10.2)(jiti@2.4.1)(terser@5.36.0))
       openai:
         specifier: ^4.71.1
-        version: 4.76.0(zod@3.23.8)
+        version: 4.76.3(zod@3.23.8)
       pino:
         specifier: ^9.5.0
         version: 9.5.0
@@ -31,7 +31,7 @@ importers:
         version: 1.13.1(@netlify/blobs@8.1.0)(ioredis@5.4.1)
       vinxi:
         specifier: ^0.5.0
-        version: 0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3)
+        version: 0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3)
     devDependencies:
       pino-pretty:
         specifier: ^13.0.0
@@ -808,11 +808,11 @@ packages:
   '@types/node-fetch@2.6.12':
     resolution: {integrity: sha512-8nneRWKCg3rMtF69nLQJnOYUcbafYeFSjqkw3jCRLsqkWFlHaoQrr5mXmofFGOx3DKn7UfmBMyov8ySvLRVldA==}
 
-  '@types/node@18.19.67':
-    resolution: {integrity: sha512-wI8uHusga+0ZugNp0Ol/3BqQfEcCCNfojtO6Oou9iVNGPTL6QNSdnUdqq85fRgIorLhLMuPIKpsN98QE9Nh+KQ==}
+  '@types/node@18.19.68':
+    resolution: {integrity: sha512-QGtpFH1vB99ZmTa63K4/FU8twThj4fuVSBkGddTp7uIL/cuoLWIUSL2RcOaigBhfR+hg5pgGkBnkoOxrTVBMKw==}
 
-  '@types/node@22.10.1':
-    resolution: {integrity: sha512-qKgsUwfHZV2WCWLAnVP1JqnpE6Im6h3Y0+fYgMTasNQ7V++CBX5OT1as0g0f+OyubbFqhf6XVNIsmN4IIhEgGQ==}
+  '@types/node@22.10.2':
+    resolution: {integrity: sha512-Xxr6BBRCAOQixvonOye19wnzyDiUtTeqldOOmj3CkeblonbccA12PFwlufvRdrpjXxqnmUaeiU5EOA+7s5diUQ==}
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
@@ -1908,8 +1908,8 @@ packages:
     resolution: {integrity: sha512-7x81NCL719oNbsq/3mh+hVrAWmFuEYUqrq/Iw3kUzH8ReypT9QQ0BLoJS7/G9k6N81XjW4qHWtjWwe/9eLy1EQ==}
     engines: {node: '>=12'}
 
-  openai@4.76.0:
-    resolution: {integrity: sha512-QBGIetjX1C9xDp5XGa/3mPnfKI9BgAe2xHQX6PmO98wuW9qQaurBaumcYptQWc9LHZZq7cH/Y1Rjnsr6uUDdVw==}
+  openai@4.76.3:
+    resolution: {integrity: sha512-BISkI90m8zT7BAMljK0j00TzOoLvmc7AulPxv6EARa++3+hhIK5G6z4xkITurEaA9bvDhQ09kSNKA3DL+rDMwA==}
     hasBin: true
     peerDependencies:
       zod: ^3.23.8
@@ -3213,11 +3213,11 @@ snapshots:
     dependencies:
       solid-js: 1.9.3
 
-  '@solidjs/start@1.0.10(solid-js@1.9.3)(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))(vite@6.0.2(@types/node@22.10.1)(jiti@2.4.1)(terser@5.36.0))':
+  '@solidjs/start@1.0.10(solid-js@1.9.3)(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))(vite@6.0.2(@types/node@22.10.2)(jiti@2.4.1)(terser@5.36.0))':
     dependencies:
-      '@vinxi/plugin-directives': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
-      '@vinxi/server-components': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
-      '@vinxi/server-functions': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
+      '@vinxi/plugin-directives': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
+      '@vinxi/server-components': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
+      '@vinxi/server-functions': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
       defu: 6.1.4
       error-stack-parser: 2.1.4
       html-to-image: 1.11.11
@@ -3228,7 +3228,7 @@ snapshots:
       source-map-js: 1.2.1
       terracotta: 1.0.6(solid-js@1.9.3)
       tinyglobby: 0.2.10
-      vite-plugin-solid: 2.10.2(solid-js@1.9.3)(vite@6.0.2(@types/node@22.10.1)(jiti@2.4.1)(terser@5.36.0))
+      vite-plugin-solid: 2.10.2(solid-js@1.9.3)(vite@6.0.2(@types/node@22.10.2)(jiti@2.4.1)(terser@5.36.0))
     transitivePeerDependencies:
       - '@testing-library/jest-dom'
       - solid-js
@@ -3263,7 +3263,7 @@ snapshots:
 
   '@types/http-proxy@1.17.15':
     dependencies:
-      '@types/node': 22.10.1
+      '@types/node': 22.10.2
 
   '@types/micromatch@4.0.9':
     dependencies:
@@ -3271,14 +3271,14 @@ snapshots:
 
   '@types/node-fetch@2.6.12':
     dependencies:
-      '@types/node': 18.19.67
+      '@types/node': 18.19.68
       form-data: 4.0.1
 
-  '@types/node@18.19.67':
+  '@types/node@18.19.68':
     dependencies:
       undici-types: 5.26.5
 
-  '@types/node@22.10.1':
+  '@types/node@22.10.2':
     dependencies:
       undici-types: 6.20.0
 
@@ -3323,7 +3323,7 @@ snapshots:
       untun: 0.1.3
       uqr: 0.1.2
 
-  '@vinxi/plugin-directives@0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))':
+  '@vinxi/plugin-directives@0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))':
     dependencies:
       '@babel/parser': 7.26.2
       acorn: 8.14.0
@@ -3334,29 +3334,29 @@ snapshots:
       magicast: 0.2.11
       recast: 0.23.9
       tslib: 2.8.1
-      vinxi: 0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3)
+      vinxi: 0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3)
 
-  '@vinxi/server-components@0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))':
+  '@vinxi/server-components@0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))':
     dependencies:
-      '@vinxi/plugin-directives': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
+      '@vinxi/plugin-directives': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
       acorn: 8.14.0
       acorn-loose: 8.4.0
       acorn-typescript: 1.4.13(acorn@8.14.0)
       astring: 1.9.0
       magicast: 0.2.11
       recast: 0.23.9
-      vinxi: 0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3)
+      vinxi: 0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3)
 
-  '@vinxi/server-functions@0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))':
+  '@vinxi/server-functions@0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))':
     dependencies:
-      '@vinxi/plugin-directives': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
+      '@vinxi/plugin-directives': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
       acorn: 8.14.0
       acorn-loose: 8.4.0
       acorn-typescript: 1.4.13(acorn@8.14.0)
       astring: 1.9.0
       magicast: 0.2.11
       recast: 0.23.9
-      vinxi: 0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3)
+      vinxi: 0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3)
 
   abbrev@1.1.1: {}
 
@@ -4467,9 +4467,9 @@ snapshots:
       is-docker: 2.2.1
       is-wsl: 2.2.0
 
-  openai@4.76.0(zod@3.23.8):
+  openai@4.76.3(zod@3.23.8):
     dependencies:
-      '@types/node': 18.19.67
+      '@types/node': 18.19.68
       '@types/node-fetch': 2.6.12
       abort-controller: 3.0.0
       agentkeepalive: 4.5.0
@@ -5066,7 +5066,7 @@ snapshots:
 
   validate-html-nesting@1.2.2: {}
 
-  vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3):
+  vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3):
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-syntax-jsx': 7.25.9(@babel/core@7.26.0)
@@ -5100,7 +5100,7 @@ snapshots:
       unctx: 2.3.1
       unenv: 1.10.0
       unstorage: 1.13.1(@netlify/blobs@8.1.0)(ioredis@5.4.1)
-      vite: 6.0.2(@types/node@22.10.1)(jiti@2.4.1)(terser@5.36.0)
+      vite: 6.0.2(@types/node@22.10.2)(jiti@2.4.1)(terser@5.36.0)
       zod: 3.23.8
     transitivePeerDependencies:
       - '@azure/app-configuration'
@@ -5138,7 +5138,7 @@ snapshots:
       - xml2js
       - yaml
 
-  vite-plugin-solid@2.10.2(solid-js@1.9.3)(vite@6.0.2(@types/node@22.10.1)(jiti@2.4.1)(terser@5.36.0)):
+  vite-plugin-solid@2.10.2(solid-js@1.9.3)(vite@6.0.2(@types/node@22.10.2)(jiti@2.4.1)(terser@5.36.0)):
     dependencies:
       '@babel/core': 7.26.0
       '@types/babel__core': 7.20.5
@@ -5146,25 +5146,25 @@ snapshots:
       merge-anything: 5.1.7
       solid-js: 1.9.3
       solid-refresh: 0.6.3(solid-js@1.9.3)
-      vite: 6.0.2(@types/node@22.10.1)(jiti@2.4.1)(terser@5.36.0)
-      vitefu: 0.2.5(vite@6.0.2(@types/node@22.10.1)(jiti@2.4.1)(terser@5.36.0))
+      vite: 6.0.2(@types/node@22.10.2)(jiti@2.4.1)(terser@5.36.0)
+      vitefu: 0.2.5(vite@6.0.2(@types/node@22.10.2)(jiti@2.4.1)(terser@5.36.0))
     transitivePeerDependencies:
       - supports-color
 
-  vite@6.0.2(@types/node@22.10.1)(jiti@2.4.1)(terser@5.36.0):
+  vite@6.0.2(@types/node@22.10.2)(jiti@2.4.1)(terser@5.36.0):
     dependencies:
       esbuild: 0.24.0
       postcss: 8.4.49
       rollup: 4.28.0
     optionalDependencies:
-      '@types/node': 22.10.1
+      '@types/node': 22.10.2
       fsevents: 2.3.3
       jiti: 2.4.1
       terser: 5.36.0
 
-  vitefu@0.2.5(vite@6.0.2(@types/node@22.10.1)(jiti@2.4.1)(terser@5.36.0)):
+  vitefu@0.2.5(vite@6.0.2(@types/node@22.10.2)(jiti@2.4.1)(terser@5.36.0)):
     optionalDependencies:
-      vite: 6.0.2(@types/node@22.10.1)(jiti@2.4.1)(terser@5.36.0)
+      vite: 6.0.2(@types/node@22.10.2)(jiti@2.4.1)(terser@5.36.0)
 
   web-streams-polyfill@4.0.0-beta.3: {}
 
