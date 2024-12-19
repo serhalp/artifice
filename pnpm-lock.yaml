@@ -16,7 +16,7 @@ importers:
         version: 0.15.2(solid-js@1.9.3)
       '@solidjs/start':
         specifier: ^1.0.10
-        version: 1.0.10(solid-js@1.9.3)(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))(vite@6.0.2(@types/node@22.10.2)(jiti@2.4.1)(terser@5.36.0))
+        version: 1.0.10(solid-js@1.9.3)(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(db0@0.2.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))(vite@6.0.2(@types/node@22.10.2)(jiti@2.4.1)(terser@5.36.0))
       openai:
         specifier: ^4.71.1
         version: 4.76.3(zod@3.23.8)
@@ -27,11 +27,11 @@ importers:
         specifier: ^1.9.3
         version: 1.9.3
       unstorage:
-        specifier: 1.13.1
-        version: 1.13.1(@netlify/blobs@8.1.0)(ioredis@5.4.1)
+        specifier: 1.14.1
+        version: 1.14.1(@netlify/blobs@8.1.0)(db0@0.2.1)(ioredis@5.4.1)
       vinxi:
         specifier: ^0.5.0
-        version: 0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3)
+        version: 0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(db0@0.2.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3)
     devDependencies:
       pino-pretty:
         specifier: ^13.0.0
@@ -1131,10 +1131,6 @@ packages:
     resolution: {integrity: sha512-onMB0OkDjkXunhdW9htFjEhqrD54+M94i6ackoUkjHKbRnXdyEyKRelp4nJ1kAz32+s27jP1FsebpJCVl0BsvA==}
     engines: {node: '>=18.0'}
 
-  cross-spawn@7.0.3:
-    resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
-    engines: {node: '>= 8'}
-
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
@@ -1627,10 +1623,6 @@ packages:
     resolution: {integrity: sha512-2yTgeWTWzMWkHu6Jp9NKgePDaYHbntiwvYuuJLbbN9vl7DC9DvXKOB2BC3ZZ92D3cvV/aflH0osDfwpHepQ53w==}
     hasBin: true
 
-  jiti@2.4.0:
-    resolution: {integrity: sha512-H5UpaUI+aHOqZXlYOaFP/8AzKsg+guWu+Pr3Y8i7+Y3zr1aXAvCvTAQ1RxSc6oVD8R8c7brgNtTVP91E7upH/g==}
-    hasBin: true
-
   jiti@2.4.1:
     resolution: {integrity: sha512-yPBThwecp1wS9DmoA4x4KR2h3QoslacnDR8ypuFM962kI4/456Iy1oHx2RAgh4jfZNdn0bctsdadceiBUgpU1g==}
     hasBin: true
@@ -1795,9 +1787,6 @@ packages:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
     engines: {node: '>=10'}
     hasBin: true
-
-  mlly@1.7.2:
-    resolution: {integrity: sha512-tN3dvVHYVz4DhSXinXIk7u9syPYaJvio118uomkovAtWBT+RdbP6Lfh/5Lvo519YMmwBafwlh20IPTXIStscpA==}
 
   mlly@1.7.3:
     resolution: {integrity: sha512-xUsx5n/mN0uQf4V548PKQ+YShA4/IW0KI1dZhrNrPCLG+xizETbHTkOa1f8/xut9JRPp8kQuMnz0oqwkTiLo/A==}
@@ -2259,9 +2248,6 @@ packages:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
     engines: {node: '>= 0.8'}
 
-  std-env@3.7.0:
-    resolution: {integrity: sha512-JPbdCEQLj1w5GilpiHAx3qJvFndqybBysA3qUOnznweH4QbNYUsW/ea8QzSrnh0vNsezMMw5bcVool8lM0gwzg==}
-
   std-env@3.8.0:
     resolution: {integrity: sha512-Bc3YwwCB+OzldMxOXJIIvC6cPRWr/LxOp48CdQTOkPyk/t4JWWJbrilwBd7RJzKV8QW7tJkcgAmeuLLJugl5/w==}
 
@@ -2407,22 +2393,27 @@ packages:
     resolution: {integrity: sha512-5liCNPuJW8dqh3+DM6uNM2EI3MLLpCKp/KY+9pB5M2S2SR2qvvDHhKgBOaTWEbZTAws3CXfB0rKTIolWKL05VQ==}
     engines: {node: '>=14.0.0'}
 
-  unstorage@1.13.1:
-    resolution: {integrity: sha512-ELexQHUrG05QVIM/iUeQNdl9FXDZhqLJ4yP59fnmn2jGUh0TEulwOgov1ubOb3Gt2ZGK/VMchJwPDNVEGWQpRg==}
+  unstorage@1.14.1:
+    resolution: {integrity: sha512-0MBKpoVhNLL/Ixvue9lIsrHkwwWW9/f3TRftsYu1R7nZJJyHSdgPMBDjny2op07nirnS3OX6H3u+YDFGld+1Bg==}
     peerDependencies:
-      '@azure/app-configuration': ^1.7.0
-      '@azure/cosmos': ^4.1.1
-      '@azure/data-tables': ^13.2.2
+      '@azure/app-configuration': ^1.8.0
+      '@azure/cosmos': ^4.2.0
+      '@azure/data-tables': ^13.3.0
       '@azure/identity': ^4.5.0
       '@azure/keyvault-secrets': ^4.9.0
-      '@azure/storage-blob': ^12.25.0
-      '@capacitor/preferences': ^6.0.2
+      '@azure/storage-blob': ^12.26.0
+      '@capacitor/preferences': ^6.0.3
+      '@deno/kv': '>=0.8.4'
       '@netlify/blobs': ^6.5.0 || ^7.0.0 || ^8.1.0
       '@planetscale/database': ^1.19.0
       '@upstash/redis': ^1.34.3
+      '@vercel/blob': '>=0.27.0'
       '@vercel/kv': ^1.0.1
+      aws4fetch: ^1.0.20
+      db0: '>=0.2.1'
       idb-keyval: ^6.2.1
       ioredis: ^5.4.1
+      uploadthing: ^7.4.1
     peerDependenciesMeta:
       '@azure/app-configuration':
         optional: true
@@ -2438,17 +2429,27 @@ packages:
         optional: true
       '@capacitor/preferences':
         optional: true
+      '@deno/kv':
+        optional: true
       '@netlify/blobs':
         optional: true
       '@planetscale/database':
         optional: true
       '@upstash/redis':
         optional: true
+      '@vercel/blob':
+        optional: true
       '@vercel/kv':
+        optional: true
+      aws4fetch:
+        optional: true
+      db0:
         optional: true
       idb-keyval:
         optional: true
       ioredis:
+        optional: true
+      uploadthing:
         optional: true
 
   untun@0.1.3:
@@ -3213,11 +3214,11 @@ snapshots:
     dependencies:
       solid-js: 1.9.3
 
-  '@solidjs/start@1.0.10(solid-js@1.9.3)(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))(vite@6.0.2(@types/node@22.10.2)(jiti@2.4.1)(terser@5.36.0))':
+  '@solidjs/start@1.0.10(solid-js@1.9.3)(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(db0@0.2.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))(vite@6.0.2(@types/node@22.10.2)(jiti@2.4.1)(terser@5.36.0))':
     dependencies:
-      '@vinxi/plugin-directives': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
-      '@vinxi/server-components': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
-      '@vinxi/server-functions': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
+      '@vinxi/plugin-directives': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(db0@0.2.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
+      '@vinxi/server-components': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(db0@0.2.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
+      '@vinxi/server-functions': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(db0@0.2.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
       defu: 6.1.4
       error-stack-parser: 2.1.4
       html-to-image: 1.11.11
@@ -3323,7 +3324,7 @@ snapshots:
       untun: 0.1.3
       uqr: 0.1.2
 
-  '@vinxi/plugin-directives@0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))':
+  '@vinxi/plugin-directives@0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(db0@0.2.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))':
     dependencies:
       '@babel/parser': 7.26.2
       acorn: 8.14.0
@@ -3334,29 +3335,29 @@ snapshots:
       magicast: 0.2.11
       recast: 0.23.9
       tslib: 2.8.1
-      vinxi: 0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3)
+      vinxi: 0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(db0@0.2.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3)
 
-  '@vinxi/server-components@0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))':
+  '@vinxi/server-components@0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(db0@0.2.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))':
     dependencies:
-      '@vinxi/plugin-directives': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
+      '@vinxi/plugin-directives': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(db0@0.2.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
       acorn: 8.14.0
       acorn-loose: 8.4.0
       acorn-typescript: 1.4.13(acorn@8.14.0)
       astring: 1.9.0
       magicast: 0.2.11
       recast: 0.23.9
-      vinxi: 0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3)
+      vinxi: 0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(db0@0.2.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3)
 
-  '@vinxi/server-functions@0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))':
+  '@vinxi/server-functions@0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(db0@0.2.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))':
     dependencies:
-      '@vinxi/plugin-directives': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
+      '@vinxi/plugin-directives': 0.4.3(vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(db0@0.2.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3))
       acorn: 8.14.0
       acorn-loose: 8.4.0
       acorn-typescript: 1.4.13(acorn@8.14.0)
       astring: 1.9.0
       magicast: 0.2.11
       recast: 0.23.9
-      vinxi: 0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3)
+      vinxi: 0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(db0@0.2.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3)
 
   abbrev@1.1.1: {}
 
@@ -3648,12 +3649,6 @@ snapshots:
 
   croner@9.0.0: {}
 
-  cross-spawn@7.0.3:
-    dependencies:
-      path-key: 3.1.1
-      shebang-command: 2.0.0
-      which: 2.0.2
-
   cross-spawn@7.0.6:
     dependencies:
       path-key: 3.1.1
@@ -3818,7 +3813,7 @@ snapshots:
 
   execa@8.0.1:
     dependencies:
-      cross-spawn: 7.0.3
+      cross-spawn: 7.0.6
       get-stream: 8.0.1
       human-signals: 5.0.0
       is-stream: 3.0.0
@@ -4129,8 +4124,6 @@ snapshots:
 
   jiti@1.21.6: {}
 
-  jiti@2.4.0: {}
-
   jiti@2.4.1: {}
 
   joycon@3.1.1: {}
@@ -4177,11 +4170,11 @@ snapshots:
       get-port-please: 3.1.2
       h3: 1.13.0
       http-shutdown: 1.2.2
-      jiti: 2.4.0
-      mlly: 1.7.2
+      jiti: 2.4.1
+      mlly: 1.7.3
       node-forge: 1.3.1
       pathe: 1.1.2
-      std-env: 3.7.0
+      std-env: 3.8.0
       ufo: 1.5.4
       untun: 0.1.3
       uqr: 0.1.2
@@ -4281,13 +4274,6 @@ snapshots:
 
   mkdirp@1.0.4: {}
 
-  mlly@1.7.2:
-    dependencies:
-      acorn: 8.14.0
-      pathe: 1.1.2
-      pkg-types: 1.2.1
-      ufo: 1.5.4
-
   mlly@1.7.3:
     dependencies:
       acorn: 8.14.0
@@ -4370,7 +4356,7 @@ snapshots:
       unctx: 2.3.1
       unenv: 1.10.0
       unimport: 3.14.3(rollup@4.28.0)
-      unstorage: 1.13.1(@netlify/blobs@8.1.0)(ioredis@5.4.1)
+      unstorage: 1.14.1(@netlify/blobs@8.1.0)(db0@0.2.1)(ioredis@5.4.1)
       untyped: 1.5.1
       unwasm: 0.3.9
     transitivePeerDependencies:
@@ -4381,12 +4367,15 @@ snapshots:
       - '@azure/keyvault-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
+      - '@deno/kv'
       - '@electric-sql/pglite'
       - '@libsql/client'
       - '@netlify/blobs'
       - '@planetscale/database'
       - '@upstash/redis'
+      - '@vercel/blob'
       - '@vercel/kv'
+      - aws4fetch
       - better-sqlite3
       - drizzle-orm
       - encoding
@@ -4394,6 +4383,7 @@ snapshots:
       - mysql2
       - supports-color
       - typescript
+      - uploadthing
 
   node-addon-api@7.1.1: {}
 
@@ -4573,7 +4563,7 @@ snapshots:
   pkg-types@1.2.1:
     dependencies:
       confbox: 0.1.8
-      mlly: 1.7.2
+      mlly: 1.7.3
       pathe: 1.1.2
 
   pluralize@8.0.0: {}
@@ -4844,8 +4834,6 @@ snapshots:
 
   statuses@2.0.1: {}
 
-  std-env@3.7.0: {}
-
   std-env@3.8.0: {}
 
   streamx@2.21.0:
@@ -5007,7 +4995,7 @@ snapshots:
       acorn: 8.14.0
       webpack-virtual-modules: 0.6.2
 
-  unstorage@1.13.1(@netlify/blobs@8.1.0)(ioredis@5.4.1):
+  unstorage@1.14.1(@netlify/blobs@8.1.0)(db0@0.2.1)(ioredis@5.4.1):
     dependencies:
       anymatch: 3.1.3
       chokidar: 3.6.0
@@ -5021,6 +5009,7 @@ snapshots:
       ufo: 1.5.4
     optionalDependencies:
       '@netlify/blobs': 8.1.0
+      db0: 0.2.1
       ioredis: 5.4.1
 
   untun@0.1.3:
@@ -5066,7 +5055,7 @@ snapshots:
 
   validate-html-nesting@1.2.2: {}
 
-  vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3):
+  vinxi@0.5.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(db0@0.2.1)(ioredis@5.4.1)(jiti@2.4.1)(terser@5.36.0)(typescript@5.6.3):
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-syntax-jsx': 7.25.9(@babel/core@7.26.0)
@@ -5099,7 +5088,7 @@ snapshots:
       ufo: 1.5.4
       unctx: 2.3.1
       unenv: 1.10.0
-      unstorage: 1.13.1(@netlify/blobs@8.1.0)(ioredis@5.4.1)
+      unstorage: 1.14.1(@netlify/blobs@8.1.0)(db0@0.2.1)(ioredis@5.4.1)
       vite: 6.0.2(@types/node@22.10.2)(jiti@2.4.1)(terser@5.36.0)
       zod: 3.23.8
     transitivePeerDependencies:
@@ -5110,14 +5099,18 @@ snapshots:
       - '@azure/keyvault-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
+      - '@deno/kv'
       - '@electric-sql/pglite'
       - '@libsql/client'
       - '@netlify/blobs'
       - '@planetscale/database'
       - '@types/node'
       - '@upstash/redis'
+      - '@vercel/blob'
       - '@vercel/kv'
+      - aws4fetch
       - better-sqlite3
+      - db0
       - debug
       - drizzle-orm
       - encoding
@@ -5135,6 +5128,7 @@ snapshots:
       - terser
       - tsx
       - typescript
+      - uploadthing
       - xml2js
       - yaml
 
