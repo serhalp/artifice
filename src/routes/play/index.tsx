@@ -83,11 +83,6 @@ export default function Play() {
           </Card>
         </Match>
 
-        <Match when={submittingAnswer.pending === true}>
-          <div class="text-center text-muted-foreground">
-            <Skeleton class="h-8 w-32 mx-auto" />
-          </div>
-        </Match>
         <Match when={submittingAnswer.error}>
           <Card>
             <CardContent class="p-6">
@@ -117,7 +112,7 @@ export default function Play() {
                           ? <span class="text-success-foreground">✅ Correct!</span>
                           : <span class="text-destructive">❌ Incorrect!</span>
                         : "Oops, something went wrong"
-                      : null}
+                      : "​"}
                   </div>
 
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
