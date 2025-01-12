@@ -65,8 +65,8 @@ export default function Play() {
   const [selectedIndex, setSelectedIndex] = createSignal<number | null>(null);
 
   return (
-    <div class="container mx-auto px-4 py-8">
-      <div class="flex justify-between items-center mb-8">
+    <div class="container mx-auto px-4 h-[calc(100vh-theme(spacing.48)-theme(spacing.4))] flex flex-col mt-4">
+      <div class="flex justify-between items-center mb-4">
         <h3 class="text-2xl font-semibold">Which is the real prompt?</h3>
         <Button
           variant="default"
@@ -113,14 +113,15 @@ export default function Play() {
             const { userPromptId, generatedImage, prompts } = game()!;
 
             return (
-              <Card>
-                <CardContent class="p-6 space-y-8">
-                  <img
-                    src={`data:image/png;base64, ${generatedImage.blob}`}
-                    alt="AI-generated image"
-                    width="500"
-                    class="rounded-lg shadow-lg max-w-full h-auto mx-auto"
-                  />
+              <Card class="flex-1 flex flex-col min-h-0">
+                <CardContent class="p-6 flex flex-col h-full gap-4">
+                  <div class="flex-1 min-h-0 flex items-center justify-center">
+                    <img
+                      src={`data:image/png;base64, ${generatedImage.blob}`}
+                      alt="AI-generated image"
+                      class="max-w-full max-h-full object-contain"
+                    />
+                  </div>
 
                   <div class="text-center">
                     {submittingAnswer.pending === false
