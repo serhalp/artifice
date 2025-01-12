@@ -76,11 +76,11 @@ export default function Play() {
 
       <Switch>
         <Match when={game.loading}>
-          <div class="space-y-4">
-            <Skeleton class="h-[300px] w-full" />
+          <div class="space-y-4 w-full">
+            <Skeleton height={300} />
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <For each={[1,2,3,4]}>{() =>
-                <Skeleton class="h-24" />
+                <Skeleton height={96} />
               }</For>
             </div>
           </div>
