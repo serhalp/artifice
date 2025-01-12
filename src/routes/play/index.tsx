@@ -3,7 +3,7 @@ import {
   useSubmission,
   type RouteDefinition,
 } from "@solidjs/router";
-import { For, Match, Switch, createResource } from "solid-js";
+import { For, Match, Switch, createResource, createEffect, onCleanup, createSignal } from "solid-js";
 import { getRandomGame, submitAnswer as originalSubmitAnswer } from "~/lib/api";
 import { Button } from "~/components/ui/button"
 import { Card, CardContent } from "~/components/ui/card"
@@ -22,10 +22,26 @@ const Answer = (props: {
   index: number;
   prompt: string;
   onSelect: (prompt: string) => unknown;
+  isSelected?: boolean;
 }) => {
+  const label = ANSWER_LABELS[props.index];
+  
+  createEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.key.toUpperCase() === label && !e.metaKey && !e.ctrlKey && !e.altKey) {
+        props.onSelect(props.prompt);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyPress);
+    onCleanup(() => document.removeEventListener('keydown', handleKeyPress));
+  });
+
   return (
     <Card
-      class="cursor-pointer transition-colors hover:bg-accent"
+      class={`cursor-pointer transition-colors ${
+        props.isSelected ? 'bg-accent' : 'hover:bg-accent'
+      }`}
       onClick={() => props.onSelect(props.prompt)}
     >
       <CardContent class="flex gap-4 p-6">
@@ -34,7 +50,7 @@ const Answer = (props: {
           size="sm"
           class="h-8 w-8 p-0"
         >
-          {ANSWER_LABELS[props.index]}
+          {label}
         </Button>
         <p>{props.prompt}</p>
       </CardContent>
@@ -46,6 +62,7 @@ export default function Play() {
   const [game, { refetch }] = createResource(async () => getRandomGame());
   const submitAnswer = useAction(originalSubmitAnswer);
   const submittingAnswer = useSubmission(originalSubmitAnswer);
+  const [selectedIndex, setSelectedIndex] = createSignal<number | null>(null);
 
   return (
     <div class="container mx-auto px-4 py-8">
@@ -121,7 +138,9 @@ export default function Play() {
                         <Answer
                           index={index()}
                           prompt={prompt}
+                          isSelected={selectedIndex() === index()}
                           onSelect={async (prompt: string) => {
+                            setSelectedIndex(index());
                             await submitAnswer(userPromptId, prompt);
                           }}
                         />
