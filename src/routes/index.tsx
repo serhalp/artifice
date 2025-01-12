@@ -11,7 +11,7 @@ export default function Home(_props: RouteSectionProps) {
   let inputRef!: HTMLInputElement;
 
   return (
-    <main class="flex flex-col items-center justify-center p-8">
+    <div class="flex flex-col items-center justify-center p-8">
       <Button size="lg" class="mb-8">
         <a href="/play">Play a game</a>
       </Button>
@@ -57,6 +57,6 @@ export default function Home(_props: RouteSectionProps) {
           </div>
         </CardContent>
       </Card>
-    </main>
+    </div>
   );
 }
