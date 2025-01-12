@@ -29,8 +29,3 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm install`     | Install dependencies                            |
 | `netlify dev`      | Start local dev server                          |
 | `pnpm run build`   | Build production site to `./dist/`              |
-
-### Contributing
-
-The release data is in a plain JSON file in `src/data/releases.json`. Feel free
-to send PRs with updates.
