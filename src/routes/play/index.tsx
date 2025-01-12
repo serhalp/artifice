@@ -43,13 +43,26 @@ const Answer = (props: {
 };
 
 export default function Play() {
-  const [game] = createResource(async () => getRandomGame());
+  const [game, { refetch }] = createResource(async () => getRandomGame());
   const submitAnswer = useAction(originalSubmitAnswer);
   const submittingAnswer = useSubmission(originalSubmitAnswer);
 
   return (
     <div class="container max-w-4xl mx-auto px-4 py-8">
-      <h3 class="text-2xl font-semibold mb-8">Which is the real prompt?</h3>
+      <div class="flex justify-between items-center mb-8">
+        <h3 class="text-2xl font-semibold">Which is the real prompt?</h3>
+        <Button
+          variant="default"
+          size="default"
+          onClick={() => {
+            submittingAnswer.clear();
+            refetch();
+          }}
+          class="ml-4 font-medium"
+        >
+          Play another
+        </Button>
+      </div>
 
       <Switch>
         <Match when={game.loading}>
