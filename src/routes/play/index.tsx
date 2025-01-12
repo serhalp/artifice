@@ -65,6 +65,7 @@ export default function Play() {
           size="default"
           onClick={() => {
             submittingAnswer.clear();
+            setSelectedIndex(null);
             refetch();
           }}
           class="font-medium"
@@ -134,6 +135,7 @@ export default function Play() {
                           isSelected={selectedIndex() === index()}
                           onSelect={async (prompt: string) => {
                             setSelectedIndex(index());
+                            submittingAnswer.clear();
                             await submitAnswer(userPromptId, prompt);
                           }}
                         />
