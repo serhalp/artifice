@@ -1,32 +1,36 @@
-# SolidStart
+# Artifice
 
-Everything you need to build a Solid project, powered by [`solid-start`](https://start.solidjs.com);
+Guess the real source prompt for an image created by generative AI. Beware the decoy prompts also created by generative AI from that image.
 
-## Creating a project
+## Development
 
-```bash
-# create a new project in the current directory
-npm init solid@latest
+This is a [SolidStart](https://start.solidjs.com) site.
 
-# create a new project in my-app
-npm init solid@latest my-app
-```
+It uses the [SolidUI](https://www.solid-ui.com/) component library and [TailwindCSS](https://tailwindcss.com/) for styling.
 
-## Developing
+Images (DALL-E 3) and decoy prompts (GPT-4o mini) are generated with [OpenAI](https://www.npmjs.com/package/openai).
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+It is deployed to [Netlify](https://www.netlify.com/).
 
-```bash
-npm run dev
+It persists game data in [Netlify Blobs](https://docs.netlify.com/blobs/overview/).
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+It uses the [PNPM](https://pnpm.io/) package manager.
 
-## Building
+### Prerequisites
 
-Solid apps are built with _presets_, which optimise your project for deployment to different environments.
+You need the [Netlify CLI](https://developers.netlify.com/cli/) for local development. (This is required to get local Netlify Blobs emulation.)
 
-By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different preset, add it to the `devDependencies` in `package.json` and specify in your `app.config.js`.
+### 🧞 Commands
 
-## This project was created with the [Solid CLI](https://solid-cli.netlify.app)
+All commands are run from the root of the project, from a terminal:
+
+| Command            | Action                                          |
+| :----------------- | :---------------------------------------------- |
+| `pnpm install`     | Install dependencies                            |
+| `netlify dev`      | Start local dev server                          |
+| `pnpm run build`   | Build production site to `./dist/`              |
+
+### Contributing
+
+The release data is in a plain JSON file in `src/data/releases.json`. Feel free
+to send PRs with updates.
