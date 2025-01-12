@@ -8,12 +8,17 @@
     "start": "vinxi start"
   },
   "dependencies": {
+    "@kobalte/core": "^0.13.7",
     "@netlify/blobs": "^8.1.0",
     "@solidjs/router": "^0.15.1",
     "@solidjs/start": "^1.0.11",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "openai": "^4.78.1",
     "pino": "^9.5.0",
     "solid-js": "^1.9.4",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7",
     "unstorage": "1.14.4",
     "vinxi": "^0.5.0"
   },
@@ -22,6 +27,10 @@
   },
   "packageManager": "pnpm@9.6.0+sha1.65cd48c20dd329b7f455088b6dd17d4d5b6d02e3",
   "devDependencies": {
-    "pino-pretty": "^13.0.0"
+    "autoprefixer": "^10.4.20",
+    "pino-pretty": "^13.0.0",
+    "postcss": "^8.4.49",
+    "solid-icons": "^1.1.0",
+    "tailwindcss": "^3.4.17"
   }
 }

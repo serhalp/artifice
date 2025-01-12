@@ -30,6 +30,17 @@ export const getUserPrompts = cache(async () => {
   return (await storage.getItem<UserPrompt[]>(StorageKey.UserPrompts)) ?? [];
 }, "getUserPrompts");
 
+const normalizePrompts = (prompts: string[], referencePrompt: string): string[] => {
+  // If one prompt has different casing than all the others, the game is too easy.
+  const shouldStartWithLowerCase = referencePrompt.charAt(0).toLocaleLowerCase() === referencePrompt.charAt(0);
+  if (shouldStartWithLowerCase)
+    return prompts.map(prompt => `${prompt.charAt(0).toLocaleLowerCase()}${prompt.slice(1)}`)
+  const shouldStartWithUpperCase = referencePrompt.charAt(0).toLocaleUpperCase() === referencePrompt.charAt(0);
+  if (shouldStartWithUpperCase)
+    return prompts.map(prompt => `${prompt.charAt(0).toLocaleUpperCase()}${prompt.slice(1)}`)
+  return prompts;
+}
+
 export const submitUserPrompt = action(async (formData: FormData) => {
   "use server";
   const userInputPrompt = formData.get("prompt");
@@ -60,7 +71,7 @@ export const submitUserPrompt = action(async (formData: FormData) => {
   logger.info("Saving decoy prompts");
   await storage.setItem<DecoyPrompt[]>(
     getDecoyPromptsStorageKey({ promptId }),
-    decoyPrompts.map((prompt) => ({ prompt })),
+    normalizePrompts(decoyPrompts, userInputPrompt).map((prompt) => ({ prompt })),
   );
   logger.info("Saved decoy prompts");
 
@@ -74,6 +85,8 @@ export const submitUserPrompt = action(async (formData: FormData) => {
     },
   ]);
   logger.info("Saved user prompt");
+
+  return true;
 });
 
 const getRandomIndex = <T>(arr: T[]): number =>
