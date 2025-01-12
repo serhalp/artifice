@@ -48,7 +48,7 @@ export default function Play() {
   const submittingAnswer = useSubmission(originalSubmitAnswer);
 
   return (
-    <div class="container max-w-4xl mx-auto px-4 py-8">
+    <div class="container mx-auto px-4 py-8">
       <div class="flex justify-between items-center mb-8">
         <h3 class="text-2xl font-semibold">Which is the real prompt?</h3>
         <Button

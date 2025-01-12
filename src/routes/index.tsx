@@ -15,7 +15,7 @@ export default function Home(_props: RouteSectionProps) {
         <a href="/play">Play a game</a>
       </Button>
 
-      <Card class="w-full max-w-2xl">
+      <Card class="w-full max-w-5xl">
         <CardHeader>
           <CardTitle class="text-xl text-center">... or submit your own prompt:</CardTitle>
         </CardHeader>
