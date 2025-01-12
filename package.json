@@ -22,6 +22,9 @@
   },
   "packageManager": "pnpm@9.6.0+sha1.65cd48c20dd329b7f455088b6dd17d4d5b6d02e3",
   "devDependencies": {
-    "pino-pretty": "^13.0.0"
+    "autoprefixer": "^10.4.20",
+    "pino-pretty": "^13.0.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
   }
 }
