@@ -57,8 +57,8 @@ export default function Play() {
   const [selectedIndex, setSelectedIndex] = createSignal<number | null>(null);
 
   return (
-    <div class="container mx-auto px-4 h-[calc(100vh-theme(spacing.48)-theme(spacing.4))] flex flex-col mt-4">
-      <div class="flex justify-between items-center mb-4">
+    <div class="container mx-auto px-4 md:h-[calc(100vh-theme(spacing.48)-theme(spacing.4))] flex flex-col mt-4">
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 sm:gap-0 mb-4">
         <h3 class="text-2xl font-semibold">Which is the real prompt?</h3>
         <Button
           variant="default"
@@ -67,7 +67,7 @@ export default function Play() {
             submittingAnswer.clear();
             refetch();
           }}
-          class="ml-4 font-medium"
+          class="font-medium"
         >
           Play another
         </Button>
