@@ -5,6 +5,9 @@ import {
 } from "@solidjs/router";
 import { For, Match, Switch, createResource } from "solid-js";
 import { getRandomGame, submitAnswer as originalSubmitAnswer } from "~/lib/api";
+import { Button } from "~/components/ui/button"
+import { Card, CardContent } from "~/components/ui/card"
+import { Skeleton } from "~/components/ui/skeleton"
 
 export const route = {
   // TODO(serhalp) Is this even desirable? Does this defeat the purpose of <Suspense>?
@@ -21,20 +24,21 @@ const Answer = (props: {
   onSelect: (prompt: string) => unknown;
 }) => {
   return (
-    <>
-      <dt 
-        class="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 cursor-pointer"
-        onClick={() => props.onSelect(props.prompt)}
-      >
-        {ANSWER_LABELS[props.index]}
-      </dt>
-      <dd 
-        class="p-4 rounded-md border border-border hover:bg-accent hover:text-accent-foreground transition-colors cursor-pointer"
-        onClick={() => props.onSelect(props.prompt)}
-      >
-        {props.prompt}
-      </dd>
-    </>
+    <Card
+      class="cursor-pointer transition-colors hover:bg-accent"
+      onClick={() => props.onSelect(props.prompt)}
+    >
+      <CardContent class="flex gap-4 p-6">
+        <Button
+          variant="outline"
+          size="sm"
+          class="h-8 w-8 p-0"
+        >
+          {ANSWER_LABELS[props.index]}
+        </Button>
+        <p>{props.prompt}</p>
+      </CardContent>
+    </Card>
   );
 };
 
@@ -49,17 +53,34 @@ export default function Play() {
 
       <Switch>
         <Match when={game.loading}>
-          <div class="text-center text-muted-foreground">Loading game...</div>
+          <div class="space-y-4">
+            <Skeleton class="h-[300px] w-full" />
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <For each={[1,2,3,4]}>{() =>
+                <Skeleton class="h-24" />
+              }</For>
+            </div>
+          </div>
         </Match>
         <Match when={game.error}>
-          <span class="text-destructive">Error: {game.error}</span>
+          <Card>
+            <CardContent class="p-6">
+              Error: {game.error}
+            </CardContent>
+          </Card>
         </Match>
 
         <Match when={submittingAnswer.pending === true}>
-          <div class="text-center text-muted-foreground">Submitting answer...</div>
+          <div class="text-center text-muted-foreground">
+            <Skeleton class="h-8 w-32 mx-auto" />
+          </div>
         </Match>
         <Match when={submittingAnswer.error}>
-          <span class="text-destructive">Error: {submittingAnswer.error}</span>
+          <Card>
+            <CardContent class="p-6">
+              Error: {submittingAnswer.error}
+            </CardContent>
+          </Card>
         </Match>
 
         <Match when={game()}>
@@ -67,38 +88,40 @@ export default function Play() {
             const { userPromptId, generatedImage, prompts } = game()!;
 
             return (
-              <>
-                <img
-                  src={`data:image/png;base64, ${generatedImage.blob}`}
-                  alt="AI-generated image"
-                  width="500"
-                  class="rounded-lg shadow-lg mb-8 max-w-full h-auto mx-auto"
-                />
+              <Card>
+                <CardContent class="p-6 space-y-8">
+                  <img
+                    src={`data:image/png;base64, ${generatedImage.blob}`}
+                    alt="AI-generated image"
+                    width="500"
+                    class="rounded-lg shadow-lg max-w-full h-auto mx-auto"
+                  />
 
-                <div class="text-center mb-8">
-                  {submittingAnswer.pending === false
-                    ? typeof submittingAnswer.result === "boolean"
-                      ? submittingAnswer.result === true
-                        ? <span class="text-success-foreground">✅ Correct!</span>
-                        : <span class="text-destructive">❌ Incorrect!</span>
-                      : "Oops, something went wrong"
-                    : null}
-                </div>
+                  <div class="text-center">
+                    {submittingAnswer.pending === false
+                      ? typeof submittingAnswer.result === "boolean"
+                        ? submittingAnswer.result === true
+                          ? <span class="text-success-foreground">✅ Correct!</span>
+                          : <span class="text-destructive">❌ Incorrect!</span>
+                        : "Oops, something went wrong"
+                      : null}
+                  </div>
 
-                <dl class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <For each={prompts}>
-                    {(prompt, index) => (
-                      <Answer
-                        index={index()}
-                        prompt={prompt}
-                        onSelect={async (prompt: string) => {
-                          await submitAnswer(userPromptId, prompt);
-                        }}
-                      />
-                    )}
-                  </For>
-                </dl>
-              </>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <For each={prompts}>
+                      {(prompt, index) => (
+                        <Answer
+                          index={index()}
+                          prompt={prompt}
+                          onSelect={async (prompt: string) => {
+                            await submitAnswer(userPromptId, prompt);
+                          }}
+                        />
+                      )}
+                    </For>
+                  </div>
+                </CardContent>
+              </Card>
             );
           })()}
         </Match>

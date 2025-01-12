@@ -8,6 +8,7 @@
     "start": "vinxi start"
   },
   "dependencies": {
+    "@kobalte/core": "^0.13.7",
     "@netlify/blobs": "^8.1.0",
     "@solidjs/router": "^0.15.1",
     "@solidjs/start": "^1.0.11",
