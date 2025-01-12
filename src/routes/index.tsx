@@ -4,6 +4,7 @@ import { submitUserPrompt } from "~/lib/api";
 import { Button } from "~/components/ui/button"
 import { TextField, TextFieldInput } from "~/components/ui/text-field"
 import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card"
+import { ImSpinner2 } from 'solid-icons/im'
 
 export default function Home(_props: RouteSectionProps) {
   const submittingUserPrompt = useSubmission(submitUserPrompt);
@@ -11,7 +12,7 @@ export default function Home(_props: RouteSectionProps) {
 
   return (
     <main class="flex flex-col items-center justify-center p-8">
-      <Button asChild size="lg" class="mb-8">
+      <Button size="lg" class="mb-8">
         <a href="/play">Play a game</a>
       </Button>
 
@@ -41,12 +42,15 @@ export default function Home(_props: RouteSectionProps) {
           <div class="mt-4 text-center text-sm">
             <Switch>
               <Match when={submittingUserPrompt.pending === true}>
-                Submitting...
+                <span class="inline-flex items-center gap-2">
+                  <ImSpinner2 class="animate-spin" />
+                  Submitting...
+                </span>
               </Match>
               <Match when={submittingUserPrompt.error}>
                 <span class="text-destructive">Error: {submittingUserPrompt.error}</span>
               </Match>
-              <Match when={submittingUserPrompt.pending === false}>
+              <Match when={submittingUserPrompt.result === true}>
                 <span class="text-success-foreground">Submitted!</span>
               </Match>
             </Switch>

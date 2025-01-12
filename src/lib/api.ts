@@ -85,6 +85,8 @@ export const submitUserPrompt = action(async (formData: FormData) => {
     },
   ]);
   logger.info("Saved user prompt");
+
+  return true;
 });
 
 const getRandomIndex = <T>(arr: T[]): number =>
