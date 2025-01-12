@@ -18,7 +18,7 @@ export default function Home(_props: RouteSectionProps) {
 
       <Card class="w-full max-w-5xl">
         <CardHeader>
-          <CardTitle class="text-xl text-center">... or submit your own prompt:</CardTitle>
+          <CardTitle class="text-xl text-center">... or submit your own prompt to the pool:</CardTitle>
         </CardHeader>
         <CardContent>
           <form
