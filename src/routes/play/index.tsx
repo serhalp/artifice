@@ -40,7 +40,7 @@ const Answer = (props: {
         <Button
           variant="outline"
           size="sm"
-          class="h-8 w-8 p-0"
+          class="h-8 w-8 p-0 flex-shrink-0 flex-grow-0"
         >
           {label}
         </Button>
