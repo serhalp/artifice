@@ -1,20 +1,12 @@
 import {
   useAction,
   useSubmission,
-  type RouteDefinition,
 } from "@solidjs/router";
 import { For, Match, Switch, createResource, createEffect, onCleanup, createSignal } from "solid-js";
 import { getRandomGame, submitAnswer as originalSubmitAnswer } from "~/lib/api";
 import { Button } from "~/components/ui/button"
 import { Card, CardContent } from "~/components/ui/card"
 import { Skeleton } from "~/components/ui/skeleton"
-
-export const route = {
-  // TODO(serhalp) Is this even desirable? Does this defeat the purpose of <Suspense>?
-  preload() {
-    getRandomGame();
-  },
-} satisfies RouteDefinition;
 
 const ANSWER_LABELS = ["A", "B", "C", "D"];
 
