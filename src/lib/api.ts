@@ -185,3 +185,21 @@ export const submitAnswer = action(
     return userPrompt.userInputPrompt === prompt;
   },
 );
+
+export const deleteUserPrompt = action(async (promptId: string) => {
+  "use server";
+  console.log("hello")
+  const userPrompts = await getUserPrompts();
+  const updatedPrompts = userPrompts.filter(({ id }) => id !== promptId);
+
+  const logger = rootLogger.child({ promptId });
+  logger.info("Deleting user prompt");
+  await Promise.all([
+    storage.setItem(StorageKey.UserPrompts, updatedPrompts),
+    storage.removeItem(getGeneratedImageStorageKey({ promptId })),
+    storage.removeItem(getDecoyPromptsStorageKey({ promptId })),
+  ]);
+  logger.info("Deleted user prompt");
+
+  return true;
+});
