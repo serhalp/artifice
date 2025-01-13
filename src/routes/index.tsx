@@ -29,14 +29,17 @@ export default function Home(_props: RouteSectionProps) {
               setTimeout(() => (inputRef.value = ""));
             }}
           >
-            <TextField>
-              <TextFieldInput
-                name="prompt"
-                placeholder="e.g. a dog with cat's ears riding a bicycle"
-                ref={inputRef}
-                autofocus
-              />
-            </TextField>
+            <div class="flex gap-2">
+              <TextField class="flex-1">
+                <TextFieldInput
+                  name="prompt"
+                  placeholder="e.g. a dog with cat's ears riding a bicycle"
+                  ref={inputRef}
+                  autofocus
+                />
+              </TextField>
+              <Button type="submit">Submit</Button>
+            </div>
           </form>
 
           <div class="mt-4 text-center text-sm">
