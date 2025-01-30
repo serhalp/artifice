@@ -17,7 +17,7 @@
     "openai": "^4.78.1",
     "pino": "^9.5.0",
     "solid-js": "^1.9.4",
-    "tailwind-merge": "^2.6.0",
+    "tailwind-merge": "^3.0.0",
     "tailwindcss-animate": "^1.0.7",
     "unstorage": "1.14.4",
     "vinxi": "^0.5.0"
