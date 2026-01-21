@@ -16,7 +16,7 @@
     "clsx": "^2.1.1",
     "openai": "^4.98.0",
     "pino": "^9.5.0",
-    "solid-icons": "~1.0.12",
+    "solid-icons": "~1.2.0",
     "solid-js": "^1.9.4",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
