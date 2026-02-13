@@ -26,7 +26,7 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "pnpm@9.6.0+sha1.65cd48c20dd329b7f455088b6dd17d4d5b6d02e3",
+  "packageManager": "pnpm@10.29.3+sha512.498e1fb4cca5aa06c1dcf2611e6fafc50972ffe7189998c409e90de74566444298ffe43e6cd2acdc775ba1aa7cc5e092a8b7054c811ba8c5770f84693d33d2dc",
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "pino-pretty": "^13.0.0",
