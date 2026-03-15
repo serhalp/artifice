@@ -8,7 +8,7 @@ This is a [SolidStart](https://start.solidjs.com) site.
 
 It uses the [SolidUI](https://www.solid-ui.com/) component library and [TailwindCSS](https://tailwindcss.com/) for styling.
 
-Images (DALL-E 3) and decoy prompts (GPT-4o mini) are generated with [OpenAI](https://www.npmjs.com/package/openai).
+Images are generated with Google Gemini (`gemini-3.1-flash-image-preview`) via [@google/genai](https://www.npmjs.com/package/@google/genai), and decoy prompts are generated with [Anthropic](https://www.npmjs.com/package/@anthropic-ai/sdk), both via Netlify AI Gateway.
 
 It is deployed to [Netlify](https://www.netlify.com/).
 
