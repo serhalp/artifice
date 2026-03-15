@@ -110,7 +110,7 @@ export default function Play() {
                 <CardContent class="p-6 flex flex-col h-full gap-4">
                   <div class="flex-1 flex items-center justify-center min-h-[400px]">
                     <img
-                      src={`data:image/png;base64, ${generatedImage.blob}`}
+                      src={`data:${generatedImage.mimeType ?? "image/png"};base64,${generatedImage.blob}`}
                       alt="AI-generated image"
                       class="max-w-full max-h-full object-contain"
                     />

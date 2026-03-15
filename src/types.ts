@@ -5,9 +5,10 @@ export interface UserPrompt {
 
 export interface GeneratedImage {
   /**
-   * Base64 encoded PNG image
+   * Base64 encoded image payload
    */
   blob: string;
+  mimeType?: string;
 }
 
 export interface DecoyPrompt {

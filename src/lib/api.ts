@@ -2,7 +2,7 @@ import { randomUUID } from "node:crypto";
 import { action, cache } from "@solidjs/router";
 import type { DecoyPrompt, Game, GeneratedImage, UserPrompt } from "~/types";
 import { storage } from "./db";
-import { generateDecoyPrompts, generateImage } from "./openai";
+import { generateDecoyPrompts, generateImage } from "./ai";
 import rootLogger from "./logger";
 
 enum StorageKey {
@@ -65,8 +65,7 @@ export const submitUserPrompt = action(async (formData: FormData) => {
   logger.info("Saved generated image");
 
   logger.info("Generating decoy prompts");
-  const generatedImageUrl = `data:image/png;base64,${generatedImage}`;
-  const decoyPrompts = await generateDecoyPrompts(generatedImageUrl);
+  const decoyPrompts = await generateDecoyPrompts(generatedImage);
   logger.info("Generated decoy prompts");
   logger.info("Saving decoy prompts");
   await storage.setItem<DecoyPrompt[]>(
