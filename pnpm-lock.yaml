@@ -13,7 +13,7 @@ importers:
         version: 0.90.0(zod@4.3.6)
       '@google/genai':
         specifier: ^1.45.0
-        version: 1.49.0
+        version: 1.50.1
       '@kobalte/core':
         specifier: ^0.13.7
         version: 0.13.11(solid-js@1.9.12)
@@ -604,8 +604,8 @@ packages:
   '@floating-ui/utils@0.2.10':
     resolution: {integrity: sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==}
 
-  '@google/genai@1.49.0':
-    resolution: {integrity: sha512-hO69Zl0H3x+L0KL4stl1pLYgnqnwHoLqtKy6MRlNnW8TAxjqMdOUVafomKd4z1BePkzoxJWbYILny9a2Zk43VQ==}
+  '@google/genai@1.50.1':
+    resolution: {integrity: sha512-YbkX7H9+1Pt8wOt7DDREy8XSoiL6fRDzZQRyaVBarFf8MR3zHGqVdvM4cLbDXqPhxqvegZShgfxb8kw9C7YhAQ==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       '@modelcontextprotocol/sdk': ^1.25.2
@@ -2662,8 +2662,8 @@ packages:
   property-information@7.1.0:
     resolution: {integrity: sha512-TwEZ+X+yCJmYfL7TPUOcvBZ4QfoT5YenQiJuX//0th53DE6w0xxLEtfK3iyryQFddXuvkIk51EEgrJQ0WJkOmQ==}
 
-  protobufjs@7.5.4:
-    resolution: {integrity: sha512-CvexbZtbov6jW2eXAvLukXjXUW1TzFaivC46BpWc/3BpcCysb5Vffu+B3XHMm8lVEuy2Mm4XGex8hBSg1yapPg==}
+  protobufjs@7.5.5:
+    resolution: {integrity: sha512-3wY1AxV+VBNW8Yypfd1yQY9pXnqTAN+KwQxL8iYm3/BjKYMNg4i0owhEe26PWDOMaIrzeeF98Lqd5NGz4omiIg==}
     engines: {node: '>=12.0.0'}
 
   pump@3.0.3:
@@ -3840,11 +3840,11 @@ snapshots:
 
   '@floating-ui/utils@0.2.10': {}
 
-  '@google/genai@1.49.0':
+  '@google/genai@1.50.1':
     dependencies:
       google-auth-library: 10.6.2
       p-retry: 4.6.2
-      protobufjs: 7.5.4
+      protobufjs: 7.5.5
       ws: 8.20.0
     transitivePeerDependencies:
       - bufferutil
@@ -5515,7 +5515,7 @@ snapshots:
       crossws: 0.3.5
       defu: 6.1.4
       get-port-please: 3.2.0
-      h3: 1.15.10
+      h3: 1.15.5
       http-shutdown: 1.2.2
       jiti: 2.6.1
       mlly: 1.8.0
@@ -5970,7 +5970,7 @@ snapshots:
 
   property-information@7.1.0: {}
 
-  protobufjs@7.5.4:
+  protobufjs@7.5.5:
     dependencies:
       '@protobufjs/aspromise': 1.1.2
       '@protobufjs/base64': 1.1.2
