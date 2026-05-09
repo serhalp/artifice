@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.91.0",
-    "@google/genai": "^1.45.0",
+    "@google/genai": "^2.0.0",
     "@kobalte/core": "^0.13.7",
     "@netlify/blobs": "^10.0.0",
     "@solidjs/router": "^0.16.0",
