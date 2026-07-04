@@ -26,7 +26,7 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "pnpm@11.9.0",
+  "packageManager": "pnpm@11.10.0",
   "devDependencies": {
     "@solidjs/vite-plugin-nitro-2": "^0.3.0",
     "autoprefixer": "^10.4.20",
