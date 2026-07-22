@@ -24,8 +24,8 @@ importers:
         specifier: ^0.16.0
         version: 0.16.2(solid-js@1.9.14)
       '@solidjs/start':
-        specifier: 2.0.0-beta.10
-        version: 2.0.0-beta.10(crossws@0.4.10(srvx@0.11.22))(supports-color@10.2.2)(vite@8.1.4(@types/node@26.1.1)(esbuild@0.28.1)(jiti@1.21.7)(terser@5.49.0))
+        specifier: 2.0.0-rc.1
+        version: 2.0.0-rc.1(crossws@0.4.10(srvx@0.11.22))(supports-color@10.2.2)(vite@8.1.4(@types/node@26.1.1)(esbuild@0.28.1)(jiti@1.21.7)(terser@5.49.0))
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -1168,8 +1168,8 @@ packages:
     peerDependencies:
       solid-js: ^1.8.6
 
-  '@solidjs/start@2.0.0-beta.10':
-    resolution: {integrity: sha512-6Bz5PLDwDEw47laTvzB+bIuMDZqNkHEuqQT7EuOY/1R2bLl5tediiKbxo8A9cl0XME0fDT5EMkWGTMGs9TDtbA==}
+  '@solidjs/start@2.0.0-rc.1':
+    resolution: {integrity: sha512-T+rVcD4Si6wyUsgwpxka8pGph8OLrIrxWK7wb4b/JyLDaCrx+q6dxTJ3TxCljCgw58NWY+grmGllEgAcTm783g==}
     engines: {node: '>=24'}
     peerDependencies:
       vite: ^8 || ^9
@@ -4253,7 +4253,7 @@ snapshots:
     dependencies:
       solid-js: 1.9.14
 
-  '@solidjs/start@2.0.0-beta.10(crossws@0.4.10(srvx@0.11.22))(supports-color@10.2.2)(vite@8.1.4(@types/node@26.1.1)(esbuild@0.28.1)(jiti@1.21.7)(terser@5.49.0))':
+  '@solidjs/start@2.0.0-rc.1(crossws@0.4.10(srvx@0.11.22))(supports-color@10.2.2)(vite@8.1.4(@types/node@26.1.1)(esbuild@0.28.1)(jiti@1.21.7)(terser@5.49.0))':
     dependencies:
       '@babel/core': 7.29.7(supports-color@10.2.2)
       '@babel/traverse': 7.29.7(supports-color@10.2.2)
