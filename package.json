@@ -13,7 +13,7 @@
     "@kobalte/core": "^0.13.7",
     "@netlify/blobs": "^10.0.0",
     "@solidjs/router": "^0.16.0",
-    "@solidjs/start": "2.0.0-rc.1",
+    "@solidjs/start": "2.0.0-rc.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "pino": "^10.0.0",
