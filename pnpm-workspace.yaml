@@ -3,3 +3,5 @@ allowBuilds:
   '@parcel/watcher': false
   esbuild: true
   protobufjs: false
+minimumReleaseAgeExclude:
+  - '@solidjs/start@2.0.0'

@@ -1,12 +1,12 @@
 import { solidStart } from "@solidjs/start/config";
+import { nitro } from "nitro/vite";
 import { defineConfig } from "vite";
-import { nitroV2Plugin } from "@solidjs/vite-plugin-nitro-2";
 
 export default defineConfig(() => {
   return {
     plugins: [
       solidStart(),
-      nitroV2Plugin({
+      nitro({
         preset: "netlify",
       }),
     ],
