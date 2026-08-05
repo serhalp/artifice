@@ -8,7 +8,7 @@ This is a [SolidStart](https://start.solidjs.com) site.
 
 It uses the [SolidUI](https://www.solid-ui.com/) component library and [TailwindCSS](https://tailwindcss.com/) for styling.
 
-Images are generated with Google Gemini (`gemini-3.1-flash-image-preview`) via [@google/genai](https://www.npmjs.com/package/@google/genai), and decoy prompts are generated with [Anthropic](https://www.npmjs.com/package/@anthropic-ai/sdk), both via Netlify AI Gateway.
+Images are generated with Google Gemini (`gemini-3.1-flash-image`) via [@google/genai](https://www.npmjs.com/package/@google/genai), and decoy prompts are generated with [Anthropic](https://www.npmjs.com/package/@anthropic-ai/sdk), both via Netlify AI Gateway.
 
 It is deployed to [Netlify](https://www.netlify.com/).
 
