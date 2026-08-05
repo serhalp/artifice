@@ -1,12 +1,11 @@
 import createLogger from "pino";
 
 const logger = createLogger({
-  transport:
-    process.env.NODE_ENV === "production"
-      ? undefined
-      : {
+  transport: import.meta.env.DEV
+    ? {
         target: "pino-pretty",
-      },
+      }
+    : undefined,
 });
 
 export default logger;
