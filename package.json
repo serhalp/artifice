@@ -31,6 +31,7 @@
     "@netlify/vite-plugin": "^2.12.9",
     "autoprefixer": "^10.4.20",
     "jiti": "^2.7.0",
+    "pino-pretty": "^13.0.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
     "vite": "^8.2.0"
