@@ -5,7 +5,7 @@ const anthropic = new Anthropic();
 const google = new GoogleGenAI({});
 
 const DECOY_MODEL = "claude-haiku-4-5-20251001";
-const IMAGE_MODEL = "gemini-3.1-flash-image-preview";
+const IMAGE_MODEL = "gemini-3.1-flash-image";
 
 const extractText = (
   content: Anthropic.Messages.Message["content"],
