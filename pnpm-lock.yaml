@@ -13,7 +13,7 @@ importers:
         version: 0.115.0(zod@4.4.3)
       '@google/genai':
         specifier: ^2.0.0
-        version: 2.15.0(supports-color@10.2.2)
+        version: 2.16.0(supports-color@10.2.2)
       '@kobalte/core':
         specifier: ^0.13.7
         version: 0.13.12(solid-js@1.9.14)
@@ -376,8 +376,8 @@ packages:
   '@floating-ui/utils@0.2.11':
     resolution: {integrity: sha512-RiB/yIh78pcIxl6lLMG0CgBXAZ2Y0eVHqMPYugu+9U0AeT6YBeiJpf7lbdJNIugFP5SIjwNRgo4DhR1Qxi26Gg==}
 
-  '@google/genai@2.15.0':
-    resolution: {integrity: sha512-Q41TvqwBQ9NcmWdh6qxY5qrpg+0FaVHD7febQoH007pykxzco4ohScBUP4BBBy+Q8j5D8euIBSRIBDfWuNVCKA==}
+  '@google/genai@2.16.0':
+    resolution: {integrity: sha512-K+1C1sqR0u7NJ5xpKJCQBws0QXpfuklo3WTNuUIMvtbQfNW2O5OohX0BYT2V+PXzsUzQEwGCXPWQxttLyGQ6xw==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       '@modelcontextprotocol/sdk': ^1.25.2
@@ -4306,7 +4306,7 @@ snapshots:
 
   '@floating-ui/utils@0.2.11': {}
 
-  '@google/genai@2.15.0(supports-color@10.2.2)':
+  '@google/genai@2.16.0(supports-color@10.2.2)':
     dependencies:
       google-auth-library: 10.9.1(supports-color@10.2.2)
       p-retry: 4.6.2
