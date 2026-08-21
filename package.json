@@ -11,7 +11,7 @@
     "@anthropic-ai/sdk": "^0.116.0",
     "@google/genai": "^2.0.0",
     "@kobalte/core": "^0.13.7",
-    "@netlify/blobs": "^10.0.0",
+    "@netlify/blobs": "^11.0.0",
     "@solidjs/router": "^1.0.0",
     "@solidjs/start": "2.0.0",
     "class-variance-authority": "^0.7.1",
