@@ -53,7 +53,7 @@ importers:
     devDependencies:
       '@netlify/vite-plugin':
         specifier: ^3.0.0
-        version: 3.0.0(db0@0.3.4(@electric-sql/pglite@0.3.16))(ioredis@5.11.1(supports-color@10.2.2))(srvx@0.12.5)(supports-color@10.2.2)(vite@8.2.2(@types/node@26.2.0)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))
+        version: 3.0.1(db0@0.3.4(@electric-sql/pglite@0.3.16))(ioredis@5.11.1(supports-color@10.2.2))(srvx@0.12.5)(supports-color@10.2.2)(vite@8.2.2(@types/node@26.2.0)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))
       autoprefixer:
         specifier: ^10.4.20
         version: 10.5.4(postcss@8.5.26)
@@ -711,8 +711,8 @@ packages:
     resolution: {integrity: sha512-zRCidsQgI4CZWrZB/kmwdPf0QbSNljakfNSLizFvrsSA3UcUrTWSBNMVKmZnob92/8ESeUN0ewXLOlffJU+ATQ==}
     engines: {node: '>=22.12.0'}
 
-  '@netlify/vite-plugin@3.0.0':
-    resolution: {integrity: sha512-rRbtjh4s20IfqU0n7iNTdobmkDT7uZ/aq9fIWw07TIl8KDCv8SY5smYtKNJ+WrqhVesv3St1Vzo7CfJt82fGVw==}
+  '@netlify/vite-plugin@3.0.1':
+    resolution: {integrity: sha512-63vL+KpnbfJv+xQSfOn37j8aSOWjiljeaFL9g/HY+YNJpDJ3Y5BPPW1VExx4dcPqXBkggBHm5Y6HpTvBeTSx3Q==}
     engines: {node: '>=22.12.0'}
     peerDependencies:
       vite: ^5 || ^6 || ^7 || ^8
@@ -4760,7 +4760,7 @@ snapshots:
 
   '@netlify/types@3.0.0': {}
 
-  '@netlify/vite-plugin@3.0.0(db0@0.3.4(@electric-sql/pglite@0.3.16))(ioredis@5.11.1(supports-color@10.2.2))(srvx@0.12.5)(supports-color@10.2.2)(vite@8.2.2(@types/node@26.2.0)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))':
+  '@netlify/vite-plugin@3.0.1(db0@0.3.4(@electric-sql/pglite@0.3.16))(ioredis@5.11.1(supports-color@10.2.2))(srvx@0.12.5)(supports-color@10.2.2)(vite@8.2.2(@types/node@26.2.0)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))':
     dependencies:
       '@netlify/dev': 5.0.2(db0@0.3.4(@electric-sql/pglite@0.3.16))(ioredis@5.11.1(supports-color@10.2.2))(srvx@0.12.5)(supports-color@10.2.2)
       '@netlify/dev-utils': 6.0.1
