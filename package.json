@@ -8,7 +8,7 @@
     "start": "vite preview"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.122.0",
+    "@anthropic-ai/sdk": "^0.123.0",
     "@google/genai": "^2.0.0",
     "@kobalte/core": "^0.13.7",
     "@netlify/blobs": "^11.0.0",
