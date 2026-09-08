@@ -16,7 +16,7 @@ importers:
         version: 2.21.0(supports-color@10.2.2)
       '@kobalte/core':
         specifier: ^0.13.7
-        version: 0.13.13(solid-js@1.9.15)
+        version: 0.13.14(solid-js@1.9.15)
       '@netlify/blobs':
         specifier: ^11.0.0
         version: 11.0.3(supports-color@10.2.2)
@@ -578,8 +578,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@kobalte/core@0.13.13':
-    resolution: {integrity: sha512-czBC+IQdOgJoW7DJjeh0rht7SPmTPgWsKg7Jo3RHMfwx028WxJtDylx9dJuJuD/GUae15+E4nYafu8LwuixFYQ==}
+  '@kobalte/core@0.13.14':
+    resolution: {integrity: sha512-SBVB1lnvYbYt2x3t7fG0lo5fGLEbHQ6PII3NDPva8vD5e2v53On84ZVQiuIk0XI/55R4GQhden7Yem+R/XR8uQ==}
     peerDependencies:
       solid-js: ^1.9.8
 
@@ -4464,7 +4464,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@kobalte/core@0.13.13(solid-js@1.9.15)':
+  '@kobalte/core@0.13.14(solid-js@1.9.15)':
     dependencies:
       '@floating-ui/dom': 1.8.0
       '@internationalized/number': 3.6.7
