@@ -19,7 +19,7 @@ importers:
         version: 0.13.14(solid-js@1.9.15)
       '@netlify/blobs':
         specifier: ^11.0.0
-        version: 11.0.3(supports-color@10.2.2)
+        version: 11.1.0(supports-color@10.2.2)
       '@solidjs/router':
         specifier: ^1.0.0
         version: 1.0.0(solid-js@1.9.15)
@@ -49,7 +49,7 @@ importers:
         version: 1.0.7(tailwindcss@3.4.19(yaml@2.9.0))
       unstorage:
         specifier: 1.17.5
-        version: 1.17.5(@netlify/blobs@11.0.3(supports-color@10.2.2))(db0@0.3.4(@electric-sql/pglite@0.3.16))(ioredis@5.11.1(supports-color@10.2.2))
+        version: 1.17.5(@netlify/blobs@11.1.0(supports-color@10.2.2))(db0@0.3.4(@electric-sql/pglite@0.3.16))(ioredis@5.11.1(supports-color@10.2.2))
     devDependencies:
       '@netlify/vite-plugin':
         specifier: ^3.0.0
@@ -615,8 +615,8 @@ packages:
     resolution: {integrity: sha512-raH28PHHQ1OPAYBCkE+DOnUTS/1nYFTRiFhvO6kuowkdhPiOsvX3XR/IjhePhP8aUsH5quBwcqQ3GaOgnIwmEw==}
     engines: {node: '>=22.12.0'}
 
-  '@netlify/blobs@11.0.3':
-    resolution: {integrity: sha512-Z8IXQtQC8BQjm76i1bN+l12TTyKQ/s1R92Ajhou7+fpP0KSxnJ65QzLEb5WuFuFutn8ORrcd4mlF8A2xhw8dzA==}
+  '@netlify/blobs@11.1.0':
+    resolution: {integrity: sha512-CGb+UsFLywJA22bxcdsTmla25w/AK72sVxj+KUkjees2zw717KUBmm3miTFkDA05vZi1MbnCBIxiU0cEwbWg8w==}
     engines: {node: '>=22.12.0'}
 
   '@netlify/cache@4.0.0':
@@ -4532,7 +4532,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@netlify/blobs@11.0.3(supports-color@10.2.2)':
+  '@netlify/blobs@11.1.0(supports-color@10.2.2)':
     dependencies:
       '@netlify/dev-utils': 6.0.1
       '@netlify/otel': 7.0.2(supports-color@10.2.2)
@@ -4759,7 +4759,7 @@ snapshots:
 
   '@netlify/runtime@5.0.2(supports-color@10.2.2)':
     dependencies:
-      '@netlify/blobs': 11.0.3(supports-color@10.2.2)
+      '@netlify/blobs': 11.1.0(supports-color@10.2.2)
       '@netlify/cache': 4.0.0
       '@netlify/runtime-utils': 3.0.0
       '@netlify/types': 3.0.0
@@ -8105,7 +8105,7 @@ snapshots:
       db0: 0.3.4(@electric-sql/pglite@0.3.16)
       ioredis: 5.11.1(supports-color@10.2.2)
 
-  unstorage@1.17.5(@netlify/blobs@11.0.3(supports-color@10.2.2))(db0@0.3.4(@electric-sql/pglite@0.3.16))(ioredis@5.11.1(supports-color@10.2.2)):
+  unstorage@1.17.5(@netlify/blobs@11.1.0(supports-color@10.2.2))(db0@0.3.4(@electric-sql/pglite@0.3.16))(ioredis@5.11.1(supports-color@10.2.2)):
     dependencies:
       anymatch: 3.1.3
       chokidar: 5.0.0
@@ -8116,7 +8116,7 @@ snapshots:
       ofetch: 1.5.1
       ufo: 1.6.4
     optionalDependencies:
-      '@netlify/blobs': 11.0.3(supports-color@10.2.2)
+      '@netlify/blobs': 11.1.0(supports-color@10.2.2)
       db0: 0.3.4(@electric-sql/pglite@0.3.16)
       ioredis: 5.11.1(supports-color@10.2.2)
 
