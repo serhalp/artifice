@@ -41,6 +41,8 @@ export const generateImage = async (
     contents: prompt,
     config: {
       responseModalities: ["IMAGE"],
+      systemInstruction:
+        "You are an image generation model. Always generate an image that matches the user's description.",
     },
   });
 
@@ -49,7 +51,18 @@ export const generateImage = async (
     .find(part => part.inlineData?.data != null && part.inlineData.data.length > 0);
 
   if (imagePart?.inlineData?.data == null || imagePart.inlineData.data.length === 0) {
-    throw new Error("Image model did not return an image");
+    const details = [
+      response.candidates?.[0]?.finishReason
+        ? `finish reason: ${response.candidates[0].finishReason}`
+        : null,
+      response.promptFeedback?.blockReason
+        ? `block reason: ${response.promptFeedback.blockReason}`
+        : null,
+    ].filter(Boolean);
+
+    throw new Error(
+      `Image model did not return an image${details.length > 0 ? ` (${details.join(", ")})` : ""}`,
+    );
   }
 
   return {
