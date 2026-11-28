@@ -196,7 +196,7 @@ importers:
         version: 0.13.14(solid-js@1.9.20)
       '@netlify/blobs':
         specifier: ^11.0.0
-        version: 11.1.11(supports-color@7.2.0)
+        version: 11.1.12(supports-color@7.2.0)
       '@solidjs/router':
         specifier: ^1.0.0
         version: 1.0.3(solid-js@1.9.20)
@@ -226,11 +226,11 @@ importers:
         version: 1.0.7(tailwindcss@3.4.19(yaml@2.9.1))
       unstorage:
         specifier: 1.17.6
-        version: 1.17.6(@netlify/blobs@11.1.11(supports-color@7.2.0))
+        version: 1.17.6(@netlify/blobs@11.1.12(supports-color@7.2.0))
     devDependencies:
       '@netlify/vite-plugin':
         specifier: ^3.0.0
-        version: 3.0.1(@types/node@26.6.6)(bare-buffer@3.7.3)(supports-color@7.2.0)(unstorage@1.17.6(@netlify/blobs@11.1.11(supports-color@7.2.0)))(vite@8.4.0(@types/node@26.6.6)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.1))
+        version: 3.0.1(@types/node@26.6.6)(bare-buffer@3.7.3)(supports-color@7.2.0)(unstorage@1.17.6(@netlify/blobs@11.1.12(supports-color@7.2.0)))(vite@8.4.0(@types/node@26.6.6)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.1))
       autoprefixer:
         specifier: ^10.4.20
         version: 10.7.0(postcss@8.5.33)
@@ -875,8 +875,8 @@ packages:
   '@netlify/binary-info@1.0.0':
     resolution: {integrity: sha512-4wMPu9iN3/HL97QblBsBay3E1etIciR84izI3U+4iALY+JHCrI+a2jO0qbAZ/nxKoegypYEaiiqWXylm+/zfrw==}
 
-  '@netlify/blobs@11.1.11':
-    resolution: {integrity: sha512-lwAANKM/FKG8GdLRbDQy2ttGBPSFacF41rdMuC/AnMUI39VKDC7uCkBd0IlsP8H3/LDcC/OqwgmXvjgy22m5Og==}
+  '@netlify/blobs@11.1.12':
+    resolution: {integrity: sha512-ZWz93bFnawIlMgFE4+nid/NnNTB6/dYCgh6MIWZYjVU4+Em8UdLr30q5qpTWCeWNvueUGYk0gevGNhM1QSAvFQ==}
     engines: {node: '>=22.12.0'}
 
   '@netlify/blobs@11.1.9':
@@ -4609,7 +4609,7 @@ snapshots:
 
   '@netlify/binary-info@1.0.0': {}
 
-  '@netlify/blobs@11.1.11(supports-color@7.2.0)':
+  '@netlify/blobs@11.1.12(supports-color@7.2.0)':
     dependencies:
       '@netlify/dev-utils': 6.1.1
       '@netlify/otel': 7.0.9(supports-color@7.2.0)
@@ -4685,7 +4685,7 @@ snapshots:
       parse-gitignore: 2.0.0
       semver: 7.8.6
 
-  '@netlify/dev@5.2.0(@types/node@26.6.6)(bare-buffer@3.7.3)(supports-color@7.2.0)(unstorage@1.17.6(@netlify/blobs@11.1.11(supports-color@7.2.0)))':
+  '@netlify/dev@5.2.0(@types/node@26.6.6)(bare-buffer@3.7.3)(supports-color@7.2.0)(unstorage@1.17.6(@netlify/blobs@11.1.12(supports-color@7.2.0)))':
     dependencies:
       '@netlify/ai': 1.0.4
       '@netlify/blobs': 11.1.9(supports-color@7.2.0)
@@ -4695,7 +4695,7 @@ snapshots:
       '@netlify/edge-functions-dev': 2.0.8
       '@netlify/functions-dev': 2.0.18(bare-buffer@3.7.3)(supports-color@7.2.0)
       '@netlify/headers': 3.0.6
-      '@netlify/images': 2.0.7(@types/node@26.6.6)(unstorage@1.17.6(@netlify/blobs@11.1.11(supports-color@7.2.0)))
+      '@netlify/images': 2.0.7(@types/node@26.6.6)(unstorage@1.17.6(@netlify/blobs@11.1.12(supports-color@7.2.0)))
       '@netlify/redirects': 4.1.4
       '@netlify/runtime': 5.0.14(supports-color@7.2.0)
       '@netlify/server-dev': 0.1.8
@@ -4783,9 +4783,9 @@ snapshots:
     dependencies:
       '@netlify/headers-parser': 10.1.1
 
-  '@netlify/images@2.0.7(@types/node@26.6.6)(unstorage@1.17.6(@netlify/blobs@11.1.11(supports-color@7.2.0)))':
+  '@netlify/images@2.0.7(@types/node@26.6.6)(unstorage@1.17.6(@netlify/blobs@11.1.12(supports-color@7.2.0)))':
     dependencies:
-      ipx: 4.1.0(@types/node@26.6.6)(unstorage@1.17.6(@netlify/blobs@11.1.11(supports-color@7.2.0)))
+      ipx: 4.1.0(@types/node@26.6.6)(unstorage@1.17.6(@netlify/blobs@11.1.12(supports-color@7.2.0)))
     transitivePeerDependencies:
       - '@types/node'
       - unstorage
@@ -4823,7 +4823,7 @@ snapshots:
 
   '@netlify/runtime@5.0.14(supports-color@7.2.0)':
     dependencies:
-      '@netlify/blobs': 11.1.11(supports-color@7.2.0)
+      '@netlify/blobs': 11.1.12(supports-color@7.2.0)
       '@netlify/cache': 4.2.1
       '@netlify/runtime-utils': 3.0.1
       '@netlify/types': 3.3.1
@@ -4852,9 +4852,9 @@ snapshots:
 
   '@netlify/types@3.3.1': {}
 
-  '@netlify/vite-plugin@3.0.1(@types/node@26.6.6)(bare-buffer@3.7.3)(supports-color@7.2.0)(unstorage@1.17.6(@netlify/blobs@11.1.11(supports-color@7.2.0)))(vite@8.4.0(@types/node@26.6.6)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.1))':
+  '@netlify/vite-plugin@3.0.1(@types/node@26.6.6)(bare-buffer@3.7.3)(supports-color@7.2.0)(unstorage@1.17.6(@netlify/blobs@11.1.12(supports-color@7.2.0)))(vite@8.4.0(@types/node@26.6.6)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.1))':
     dependencies:
-      '@netlify/dev': 5.2.0(@types/node@26.6.6)(bare-buffer@3.7.3)(supports-color@7.2.0)(unstorage@1.17.6(@netlify/blobs@11.1.11(supports-color@7.2.0)))
+      '@netlify/dev': 5.2.0(@types/node@26.6.6)(bare-buffer@3.7.3)(supports-color@7.2.0)(unstorage@1.17.6(@netlify/blobs@11.1.12(supports-color@7.2.0)))
       '@netlify/dev-utils': 6.1.1
       dedent: 1.7.2
       vite: 8.4.0(@types/node@26.6.6)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.1)
@@ -6427,12 +6427,12 @@ snapshots:
       hasown: 2.0.4
       side-channel: 1.1.1
 
-  ipx@4.1.0(@types/node@26.6.6)(unstorage@1.17.6(@netlify/blobs@11.1.11(supports-color@7.2.0))):
+  ipx@4.1.0(@types/node@26.6.6)(unstorage@1.17.6(@netlify/blobs@11.1.12(supports-color@7.2.0))):
     dependencies:
       sharp: 0.35.5(@types/node@26.6.6)
       srvx: 1.0.8
     optionalDependencies:
-      unstorage: 1.17.6(@netlify/blobs@11.1.11(supports-color@7.2.0))
+      unstorage: 1.17.6(@netlify/blobs@11.1.12(supports-color@7.2.0))
     transitivePeerDependencies:
       - '@types/node'
 
@@ -7876,7 +7876,7 @@ snapshots:
     dependencies:
       normalize-path: 2.1.1
 
-  unstorage@1.17.6(@netlify/blobs@11.1.11(supports-color@7.2.0)):
+  unstorage@1.17.6(@netlify/blobs@11.1.12(supports-color@7.2.0)):
     dependencies:
       anymatch: 3.1.3
       chokidar: 5.0.0
@@ -7887,7 +7887,7 @@ snapshots:
       ofetch: 1.5.1
       ufo: 1.6.4
     optionalDependencies:
-      '@netlify/blobs': 11.1.11(supports-color@7.2.0)
+      '@netlify/blobs': 11.1.12(supports-color@7.2.0)
 
   update-browserslist-db@1.4.0(browserslist@4.29.6):
     dependencies:
